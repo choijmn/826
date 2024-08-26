@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summer playlist</title>
+    <style type="text/css">
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: auto; /* 수평 스크롤 허용 */
+            width: 200%; /* 전체 너비를 200%로 설정하여 스크롤 가능하게 함 */
+        }
+        ::selection {
+            background-color: #4F4CFF;
+            color: greenyellow;
+        }
+        .block {
+            display: block;
+        }
+        .element {
+            cursor: url('cs3.png'), auto;
+        }
+        u {            
+            text-decoration: underline; /* 기본 밑줄 스타일 */
+            text-decoration-color: black; /* 밑줄 색상 */
+            text-decoration-style: dashed; 
+            text-decoration-thickness: 3px;
+            text-underline-offset: 8px;
+        }
+        u2 {
+            text-decoration: underline; /* 기본 밑줄 스타일 */
+            text-decoration-color: white; /* 밑줄 색상 */
+            text-decoration-style: solid; 
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;            
+        }
+        u3 {
+            text-decoration: underline; /* 기본 밑줄 스타일 */
+            text-decoration-color: black; /* 밑줄 색상 */
+            text-decoration-style: solid; 
+            text-decoration-thickness: 1px;
+            text-underline-offset: 5px;            
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 3456px;
+            height: 100%;
+        }
+
+        h1 {
+            font-family: 'Outfit'; 
+            color: #ffffff;
+            font-size: 80px; 
+            letter-spacing: -20%; 
+            line-height: 150%;
+            font-weight: 430;
+            text-align: center;
+            margin: 0;
+            padding-bottom: 40px;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            z-index: 40;
+            transform: translateX(-50%);
+        }
+        h2 {
+            font-family: 'SM KGothic Std'; 
+            color: #000000;
+            font-size: 50px; 
+            letter-spacing: -5%; 
+            font-weight: 430;
+            text-align: left;
+            padding-bottom: 100px;
+            margin: 0;
+        }
+        h3 {
+            font-family: 'helvetica'; 
+            color: #ffffff;
+            font-size: 19px; 
+            letter-spacing: -5%; 
+            font-weight: 300;
+            text-align: center;
+            padding-bottom: 80px;
+            margin: 0;
+        }
+        h4 {
+            font-family: 'helvetica'; 
+            font-size: 19px; 
+            letter-spacing: -5%; 
+            font-weight: 400;
+            text-align: center;
+            padding-bottom: 80px;
+            margin: 0;
+        }
+        p {
+            font-family:'SM TGothic Std'; 
+            font-size: 13px; 
+            letter-spacing: -5%; 
+            line-height: 170%;
+            padding: 5px 10px;
+        }         
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            justify-content: center;
+        }         
+
+        .main {
+            background-image: url('mainbg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            float: left; /* 왼쪽에 배치 */
+        }
+
+        .main2 {
+            background-color: #ffffff; /* 두 번째 섹션의 배경색 */
+            width: 1728px;
+            height:100vh;
+            float: left; /* 오른쪽에 배치 */
+            margin: 0;
+            cursor: url('cs3.png'), auto;
+        }
+        .content2 {
+            padding: 35px 68px 35px 68px;
+        }
+
+        .playlist-container {
+            width: 1602px;
+            margin: 0 auto;
+        }
+
+        .playlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            height: 450px; /* 높이를 반으로 줄임 */
+        }
+
+        .playlist div {
+            width: calc((100% - 150px) / 5);
+            height: 90%;
+            display: flex;
+            flex-direction: column; /* 세로로 요소 배치 */
+        }
+
+        .playlist div .top-layer1,
+        .playlist div .top-layer2,
+        .playlist div .top-layer3,
+        .playlist div .top-layer4,
+        .playlist div .top-layer5,
+        .playlist div .middle-layer1,
+        .playlist div .middle-layer2,
+        .playlist div .middle-layer3,
+        .playlist div .middle-layer4,
+        .playlist div .middle-layer5,
+        .playlist div .bottom-layer1,
+        .playlist div .bottom-layer2,
+        .playlist div .bottom-layer3,
+        .playlist div .bottom-layer4,
+        .playlist div .bottom-layer5 {
+            width: 100%; /* 부모 요소의 전체 너비를 차지 */
+            position: relative;
+        }
+
+        .playlist div .top-layer1 {
+            height: 7%; /* 첫 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+        }
+        .playlist div .top-layer2 {
+            height: 7%; /* 첫 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+        }
+        .playlist div .top-layer3 {
+            height: 7%; /* 첫 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+        }
+        .playlist div .top-layer4 {
+            height: 7%; /* 첫 번째 층의 높이 */
+            background-color: #ACFF79;
+            color: #000;
+
+        }
+        .playlist div .top-layer5 {
+            height: 7%; /* 첫 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+        }        
+        .playlist div .middle-layer1 {
+            height: 76%;
+            width: 100%;
+            background-image: url(so1.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+        .playlist div .middle-layer2 {
+            height: 76%;
+            width: 100%;
+            background-image: url(so2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .playlist div .middle-layer3 {
+            height: 76%;
+            width: 100%;
+            background-image: url(so3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .playlist div .middle-layer4 {
+            height: 76%;
+            width: 100%;
+            background-image: url(so4.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .playlist div .middle-layer5 {
+            height: 76%;
+            width: 100%;
+            background-image: url(so5.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .playlist div .bottom-layer1 {
+            height: 10%; /* 세 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+            position: relative; /* 자식 요소를 기준으로 중앙 정렬할 수 있게 설정 */
+        }
+        .playlist div .bottom-layer2 {
+            height: 10%; /* 세 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+            position: relative; /* 자식 요소를 기준으로 중앙 정렬할 수 있게 설정 */
+        }
+        .playlist div .bottom-layer3 {
+            height: 10%; /* 세 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+            position: relative; /* 자식 요소를 기준으로 중앙 정렬할 수 있게 설정 */
+        }
+        .playlist div .bottom-layer4 {
+            height: 40%; /* 세 번째 층의 높이 */
+            background-color: #ACFF79;
+            color: #000;
+            position: relative; /* 자식 요소를 기준으로 중앙 정렬할 수 있게 설정 */
+        }
+        .playlist div .bottom-layer5 {
+            height: 10%; /* 세 번째 층의 높이 */
+            background-color: #000; /* 검정색 배경 */
+            position: relative; /* 자식 요소를 기준으로 중앙 정렬할 수 있게 설정 */
+        }       
+
+        div.open {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 부모 요소의 중앙으로 이동 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img.open {
+            width: 5px;
+            height: auto;
+        }
+
+
+        img.top01 {
+            width: 95%;
+            height: auto;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 30;
+        }
+
+        img.top02 {
+            width: 25%;
+            height: auto;
+            position: relative;
+            top: 60px;
+        }
+
+        img.top03 {
+            width: 40%;
+            position: relative;
+            top: 700px;
+        }
+
+        img.sec01 {
+            width: 90%;
+            height: auto;
+        }
+        div.bar {
+            position: absolute;
+            bottom: 0;
+            padding:0;
+            margin: 0
+            ;display: block;}
+
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <img src="top01.png" class="top01">
+            <img src="comp3.gif" class="top02">
+            <img src="side.png" class="top03">
+        </div>
+    </div>
+
+    <div class="main2">
+        <div class="content2">
+            <div class="title2">
+                <h2><u>여름에 듣는 음악</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>MOS</u></h2>
+            </div>
+                    <div class="playlist-container">
+                        <div class="playlist">
+                            <div class="so1">
+                                <div class="top-layer1">
+                                    <h3><u2>01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trippy</u2></h3>
+                                </div>
+                                <div class="middle-layer1"></div>
+                                <div class="bottom-layer1">
+                                    <div class="open">
+                                        <img src="open.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="so2" style="transform:translateY(40%);"> 
+                                <div class="top-layer2">
+                                    <h3><u2>02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; It Ain’t Over ‘Til It’s Over </u2></h3>
+                                </div>
+                                <div class="middle-layer2"></div>
+                                <div class="bottom-layer2">
+                                    <div class="open">
+                                        <img src="open.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="so3">
+                                <div class="top-layer3">
+                                    <h3><u2>03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Year to Year </u2></h3>
+                                </div>
+                                <div class="middle-layer3"></div>
+                                <div class="bottom-layer3">
+                                    <div class="open">
+                                        <img src="open.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="so4" style="transform:translateY(40%);">
+                                <div class="top-layer4">
+                                    <h4><u3>04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hey sun </u3></h4>
+                                </div>
+                                <div class="middle-layer4"></div>
+                                <div class="bottom-layer4">
+                                        <p>언제 들어도 좋은 곡이지만, 특히 해가 이르게 지고, 선선한 바람이 불기 시작하는 늦여름의 저녁에 가장 잘 어울린다. 잘 안되던 무엇이든, 잠시 시간을 가지고 쉬다보면 여유로운 마음으로 다시 시작할 수 있다!</p>
+                                        <div class="open">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="so5">
+                                <div class="top-layer5">
+                                    <h3><u2>05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feather </u2></h3>
+                                </div>
+                                <div class="middle-layer5"></div>
+                                <div class="bottom-layer5">
+                                    <div class="open">
+                                        <img src="open.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <div class="bar">
+            <img src="bar.svg">
+        </div>
+    </div>
+</body>
+</html>
